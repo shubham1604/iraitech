@@ -5,7 +5,7 @@ def calculate_without_recursion(n,x):
          sum += 1/x**i
     return sum
 
-def calculate_with_recursion(n,sum=0):
+def calculate_with_recursion(n): #denominator is assumed 2 here can also be passes using the arguement
     if n == 1 or n <= 0:
         return 1/2
     sum = 1/2**n + calculate_with_recursion(n-1,)
@@ -22,6 +22,9 @@ if __name__ == "__main__":
     print("Problem 1")
     calculate_without_recursion(4,2)
 
+    f = calculate_with_recursion(4)
+    print(f)
+
     print("Problem 2")
     series(9)
 
@@ -29,6 +32,3 @@ if __name__ == "__main__":
     print("Enter 4 space separated numbers for problem 3")
     x,y,a,b =  [int(i) for i in input().split()]
     print( (((x+1/y)**a) * (1-(1/y))**b) /  (((y+1/x)**a)*((y-1/x)**b))  )
-
-    f = calculate_with_recursion(4)
-    print(f)
