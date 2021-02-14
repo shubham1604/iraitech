@@ -9,5 +9,5 @@
 3) Run pip install -r requirements.txt 
 4) Create a super user using "python manage.py createsuperuser" as there is no user creation form in this project
 5) Whenever you are asked for a login , login using superuser
-6) go to localhost/http://localhost:8000/api/v1/calculate/ to access the api for last problem
+6) Go to http://localhost:8000/api/v1/calculate/ to access the api for last problem
 7) Custom user model can be found at core/models.py
